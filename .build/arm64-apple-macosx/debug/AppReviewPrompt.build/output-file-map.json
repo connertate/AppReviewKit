@@ -1,0 +1,33 @@
+{
+  "": {
+    "swift-dependencies": "/Users/connertate/Developer/Apple/AppReviewPrompt/.build/arm64-apple-macosx/debug/AppReviewPrompt.build/master.swiftdeps"
+  },
+  "/Users/connertate/Developer/Apple/AppReviewPrompt/Sources/AppReviewPrompt/AppReviewPromptModifier.swift": {
+    "dependencies": "/Users/connertate/Developer/Apple/AppReviewPrompt/.build/arm64-apple-macosx/debug/AppReviewPrompt.build/AppReviewPromptModifier.d",
+    "object": "/Users/connertate/Developer/Apple/AppReviewPrompt/.build/arm64-apple-macosx/debug/AppReviewPrompt.build/AppReviewPromptModifier.swift.o",
+    "swiftmodule": "/Users/connertate/Developer/Apple/AppReviewPrompt/.build/arm64-apple-macosx/debug/AppReviewPrompt.build/AppReviewPromptModifier~partial.swiftmodule",
+    "swift-dependencies": "/Users/connertate/Developer/Apple/AppReviewPrompt/.build/arm64-apple-macosx/debug/AppReviewPrompt.build/AppReviewPromptModifier.swiftdeps",
+    "diagnostics": "/Users/connertate/Developer/Apple/AppReviewPrompt/.build/arm64-apple-macosx/debug/AppReviewPrompt.build/AppReviewPromptModifier.dia"
+  },
+  "/Users/connertate/Developer/Apple/AppReviewPrompt/Sources/AppReviewPrompt/AppReviewPromptView.swift": {
+    "dependencies": "/Users/connertate/Developer/Apple/AppReviewPrompt/.build/arm64-apple-macosx/debug/AppReviewPrompt.build/AppReviewPromptView.d",
+    "object": "/Users/connertate/Developer/Apple/AppReviewPrompt/.build/arm64-apple-macosx/debug/AppReviewPrompt.build/AppReviewPromptView.swift.o",
+    "swiftmodule": "/Users/connertate/Developer/Apple/AppReviewPrompt/.build/arm64-apple-macosx/debug/AppReviewPrompt.build/AppReviewPromptView~partial.swiftmodule",
+    "swift-dependencies": "/Users/connertate/Developer/Apple/AppReviewPrompt/.build/arm64-apple-macosx/debug/AppReviewPrompt.build/AppReviewPromptView.swiftdeps",
+    "diagnostics": "/Users/connertate/Developer/Apple/AppReviewPrompt/.build/arm64-apple-macosx/debug/AppReviewPrompt.build/AppReviewPromptView.dia"
+  },
+  "/Users/connertate/Developer/Apple/AppReviewPrompt/Sources/AppReviewPrompt/HapticFeedback.swift": {
+    "dependencies": "/Users/connertate/Developer/Apple/AppReviewPrompt/.build/arm64-apple-macosx/debug/AppReviewPrompt.build/HapticFeedback.d",
+    "object": "/Users/connertate/Developer/Apple/AppReviewPrompt/.build/arm64-apple-macosx/debug/AppReviewPrompt.build/HapticFeedback.swift.o",
+    "swiftmodule": "/Users/connertate/Developer/Apple/AppReviewPrompt/.build/arm64-apple-macosx/debug/AppReviewPrompt.build/HapticFeedback~partial.swiftmodule",
+    "swift-dependencies": "/Users/connertate/Developer/Apple/AppReviewPrompt/.build/arm64-apple-macosx/debug/AppReviewPrompt.build/HapticFeedback.swiftdeps",
+    "diagnostics": "/Users/connertate/Developer/Apple/AppReviewPrompt/.build/arm64-apple-macosx/debug/AppReviewPrompt.build/HapticFeedback.dia"
+  },
+  "/Users/connertate/Developer/Apple/AppReviewPrompt/Sources/AppReviewPrompt/StarRatingView.swift": {
+    "dependencies": "/Users/connertate/Developer/Apple/AppReviewPrompt/.build/arm64-apple-macosx/debug/AppReviewPrompt.build/StarRatingView.d",
+    "object": "/Users/connertate/Developer/Apple/AppReviewPrompt/.build/arm64-apple-macosx/debug/AppReviewPrompt.build/StarRatingView.swift.o",
+    "swiftmodule": "/Users/connertate/Developer/Apple/AppReviewPrompt/.build/arm64-apple-macosx/debug/AppReviewPrompt.build/StarRatingView~partial.swiftmodule",
+    "swift-dependencies": "/Users/connertate/Developer/Apple/AppReviewPrompt/.build/arm64-apple-macosx/debug/AppReviewPrompt.build/StarRatingView.swiftdeps",
+    "diagnostics": "/Users/connertate/Developer/Apple/AppReviewPrompt/.build/arm64-apple-macosx/debug/AppReviewPrompt.build/StarRatingView.dia"
+  }
+}

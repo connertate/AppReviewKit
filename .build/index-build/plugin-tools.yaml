@@ -1,0 +1,47 @@
+client:
+  name: basic
+  file-system: device-agnostic
+tools: {}
+targets:
+  "AppReviewPrompt-arm64-apple-macosx26.0-debug.module": ["<AppReviewPrompt-arm64-apple-macosx26.0-debug.module>"]
+  "PackageStructure": ["<PackageStructure>"]
+  "main": ["<AppReviewPrompt-arm64-apple-macosx26.0-debug.module>"]
+  "test": ["<AppReviewPrompt-arm64-apple-macosx26.0-debug.module>"]
+default: "main"
+nodes:
+  "/Users/connertate/Developer/Apple/AppReviewPrompt/Sources/AppReviewPrompt/":
+    is-directory-structure: true
+    content-exclusion-patterns: [".git",".build"]
+commands:
+  "/Users/connertate/Developer/Apple/AppReviewPrompt/.build/index-build/arm64-apple-macosx/debug/AppReviewPrompt.build/sources":
+    tool: write-auxiliary-file
+    inputs: ["<sources-file-list>","/Users/connertate/Developer/Apple/AppReviewPrompt/Sources/AppReviewPrompt/HapticFeedback.swift"]
+    outputs: ["/Users/connertate/Developer/Apple/AppReviewPrompt/.build/index-build/arm64-apple-macosx/debug/AppReviewPrompt.build/sources"]
+    description: "Write auxiliary file /Users/connertate/Developer/Apple/AppReviewPrompt/.build/index-build/arm64-apple-macosx/debug/AppReviewPrompt.build/sources"
+
+  "/Users/connertate/Developer/Apple/AppReviewPrompt/.build/index-build/arm64-apple-macosx/debug/swift-version--3CB7CFEC50E0D141.txt":
+    tool: write-auxiliary-file
+    inputs: ["<swift-get-version>","/Applications/Xcode-26.3.0.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swiftc"]
+    outputs: ["/Users/connertate/Developer/Apple/AppReviewPrompt/.build/index-build/arm64-apple-macosx/debug/swift-version--3CB7CFEC50E0D141.txt"]
+    always-out-of-date: "true"
+    description: "Write auxiliary file /Users/connertate/Developer/Apple/AppReviewPrompt/.build/index-build/arm64-apple-macosx/debug/swift-version--3CB7CFEC50E0D141.txt"
+
+  "<AppReviewPrompt-arm64-apple-macosx26.0-debug.module>":
+    tool: phony
+    inputs: ["/Users/connertate/Developer/Apple/AppReviewPrompt/.build/index-build/arm64-apple-macosx/debug/Modules/AppReviewPrompt.swiftmodule"]
+    outputs: ["<AppReviewPrompt-arm64-apple-macosx26.0-debug.module>"]
+
+  "C.AppReviewPrompt-arm64-apple-macosx26.0-debug.module":
+    tool: shell
+    inputs: ["/Users/connertate/Developer/Apple/AppReviewPrompt/Sources/AppReviewPrompt/HapticFeedback.swift","/Users/connertate/Developer/Apple/AppReviewPrompt/.build/index-build/arm64-apple-macosx/debug/swift-version--3CB7CFEC50E0D141.txt","/Users/connertate/Developer/Apple/AppReviewPrompt/.build/index-build/arm64-apple-macosx/debug/AppReviewPrompt.build/sources"]
+    outputs: ["/Users/connertate/Developer/Apple/AppReviewPrompt/.build/index-build/arm64-apple-macosx/debug/Modules/AppReviewPrompt.swiftmodule"]
+    description: "Compiling Swift Module 'AppReviewPrompt' (1 sources)"
+    args: ["/Applications/Xcode-26.3.0.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swiftc","-module-name","AppReviewPrompt","-emit-dependencies","-emit-module","-emit-module-path","/Users/connertate/Developer/Apple/AppReviewPrompt/.build/index-build/arm64-apple-macosx/debug/Modules/AppReviewPrompt.swiftmodule","-output-file-map","/Users/connertate/Developer/Apple/AppReviewPrompt/.build/index-build/arm64-apple-macosx/debug/AppReviewPrompt.build/output-file-map.json","-parse-as-library","-incremental","@/Users/connertate/Developer/Apple/AppReviewPrompt/.build/index-build/arm64-apple-macosx/debug/AppReviewPrompt.build/sources","-I","/Users/connertate/Developer/Apple/AppReviewPrompt/.build/index-build/arm64-apple-macosx/debug/Modules","-target","arm64-apple-macosx10.13","-incremental","-enable-batch-mode","-serialize-diagnostics","-Onone","-enable-testing","-j14","-DSWIFT_PACKAGE","-DDEBUG","-DSWIFT_MODULE_RESOURCE_BUNDLE_UNAVAILABLE","-module-cache-path","/Users/connertate/Developer/Apple/AppReviewPrompt/.build/index-build/arm64-apple-macosx/debug/ModuleCache","-parseable-output","-parse-as-library","-emit-objc-header","-emit-objc-header-path","/Users/connertate/Developer/Apple/AppReviewPrompt/.build/index-build/arm64-apple-macosx/debug/AppReviewPrompt.build/include/AppReviewPrompt-Swift.h","-swift-version","6","-Xfrontend","-experimental-lazy-typecheck","-Xfrontend","-experimental-skip-all-function-bodies","-Xfrontend","-experimental-allow-module-with-compiler-errors","-Xfrontend","-empty-abi-descriptor","-plugin-path","/Applications/Xcode-26.3.0.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/host/plugins/testing","-sdk","/Applications/Xcode-26.3.0.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX26.2.sdk","-F","/Applications/Xcode-26.3.0.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks","-F","/Applications/Xcode-26.3.0.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/PrivateFrameworks","-I","/Applications/Xcode-26.3.0.app/Contents/Developer/Platforms/MacOSX.platform/Developer/usr/lib","-L","/Applications/Xcode-26.3.0.app/Contents/Developer/Platforms/MacOSX.platform/Developer/usr/lib","-g","-Xcc","-isysroot","-Xcc","/Applications/Xcode-26.3.0.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX26.2.sdk","-Xcc","-F","-Xcc","/Applications/Xcode-26.3.0.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks","-Xcc","-F","-Xcc","/Applications/Xcode-26.3.0.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/PrivateFrameworks","-Xcc","-fPIC","-Xcc","-g","-package-name","appreviewprompt"]
+
+  "PackageStructure":
+    tool: package-structure-tool
+    inputs: ["/Users/connertate/Developer/Apple/AppReviewPrompt/Sources/AppReviewPrompt/","/Users/connertate/Developer/Apple/AppReviewPrompt/Package.swift","/Users/connertate/Developer/Apple/AppReviewPrompt/Package.resolved"]
+    outputs: ["<PackageStructure>"]
+    description: "Planning build"
+    allow-missing-inputs: true
+

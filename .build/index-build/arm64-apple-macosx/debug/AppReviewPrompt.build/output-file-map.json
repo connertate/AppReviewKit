@@ -1,0 +1,12 @@
+{
+  "": {
+    "swift-dependencies": "/Users/connertate/Developer/Apple/AppReviewPrompt/.build/index-build/arm64-apple-macosx/debug/AppReviewPrompt.build/master.swiftdeps"
+  },
+  "/Users/connertate/Developer/Apple/AppReviewPrompt/Sources/AppReviewPrompt/HapticFeedback.swift": {
+    "dependencies": "/Users/connertate/Developer/Apple/AppReviewPrompt/.build/index-build/arm64-apple-macosx/debug/AppReviewPrompt.build/HapticFeedback.d",
+    "object": "/Users/connertate/Developer/Apple/AppReviewPrompt/.build/index-build/arm64-apple-macosx/debug/AppReviewPrompt.build/HapticFeedback.swift.o",
+    "swiftmodule": "/Users/connertate/Developer/Apple/AppReviewPrompt/.build/index-build/arm64-apple-macosx/debug/AppReviewPrompt.build/HapticFeedback~partial.swiftmodule",
+    "swift-dependencies": "/Users/connertate/Developer/Apple/AppReviewPrompt/.build/index-build/arm64-apple-macosx/debug/AppReviewPrompt.build/HapticFeedback.swiftdeps",
+    "diagnostics": "/Users/connertate/Developer/Apple/AppReviewPrompt/.build/index-build/arm64-apple-macosx/debug/AppReviewPrompt.build/HapticFeedback.dia"
+  }
+}
