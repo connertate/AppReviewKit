@@ -3,14 +3,14 @@
 import PackageDescription
 
 let package = Package(
-    name: "AppReviewPrompt",
+    name: "AppReviewKit",
     platforms: [.iOS(.v17)],
     products: [
-        .library(name: "AppReviewPrompt", targets: ["AppReviewPrompt"]),
+        .library(name: "AppReviewKit", targets: ["AppReviewKit"]),
     ],
     targets: [
         .target(
-            name: "AppReviewPrompt",
+            name: "AppReviewKit",
             path: "Sources/AppReviewPrompt"
         ),
     ]
