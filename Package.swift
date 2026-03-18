@@ -11,7 +11,7 @@ let package = Package(
     targets: [
         .target(
             name: "AppReviewKit",
-            path: "Sources/AppReviewPrompt"
+            path: "Sources/AppReviewKit"
         ),
     ]
 )
