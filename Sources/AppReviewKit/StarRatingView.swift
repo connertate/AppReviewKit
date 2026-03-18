@@ -13,8 +13,8 @@ public struct StarRatingView: View {
         HStack(spacing: 12) {
             ForEach(1...maxRating, id: \.self) { index in
                 Image(systemName: index <= rating ? "star.fill" : "star")
-                    .font(.title)
-                    .foregroundStyle(index <= rating ? .yellow : .gray)
+                    .font(.title2)
+                    .foregroundStyle(.blue)
                     .contentTransition(.symbolEffect(.replace))
                     .onTapGesture {
                         withAnimation {

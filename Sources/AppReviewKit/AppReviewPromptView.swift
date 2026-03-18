@@ -3,8 +3,8 @@ import SwiftUI
 public struct AppReviewPromptView: View {
     private let title: LocalizedStringKey
     private let subtitle: LocalizedStringKey?
-    private let primaryButtonTitle: LocalizedStringKey
     private let dismissButtonTitle: LocalizedStringKey
+    private let icon: Image?
     private let onRating: (Int) -> Void
     private let onDismiss: (() -> Void)?
 
@@ -13,57 +13,69 @@ public struct AppReviewPromptView: View {
     public init(
         title: LocalizedStringKey,
         subtitle: LocalizedStringKey? = nil,
-        primaryButtonTitle: LocalizedStringKey = "Submit",
         dismissButtonTitle: LocalizedStringKey = "Not Now",
+        icon: Image? = nil,
         onRating: @escaping (Int) -> Void,
         onDismiss: (() -> Void)? = nil
     ) {
         self.title = title
         self.subtitle = subtitle
-        self.primaryButtonTitle = primaryButtonTitle
         self.dismissButtonTitle = dismissButtonTitle
+        self.icon = icon
         self.onRating = onRating
         self.onDismiss = onDismiss
     }
 
     public var body: some View {
-        VStack(spacing: 20) {
-            Text(title)
-                .font(.title2.bold())
+        VStack(spacing: 0) {
+            VStack(spacing: 8) {
+                if let icon {
+                    icon
+                        .resizable()
+                        .scaledToFit()
+                        .frame(width: 44, height: 44)
+                        .clipShape(RoundedRectangle(cornerRadius: 10))
+                        .padding(.bottom, 4)
+                }
 
-            if let subtitle {
-                Text(subtitle)
-                    .font(.subheadline)
-                    .foregroundStyle(.secondary)
-                    .multilineTextAlignment(.center)
+                Text(title)
+                    .font(.headline)
+
+                if let subtitle {
+                    Text(subtitle)
+                        .font(.subheadline)
+                        .foregroundStyle(.secondary)
+                        .multilineTextAlignment(.center)
+                }
             }
+            .padding(.horizontal, 20)
+            .padding(.top, 20)
+            .padding(.bottom, 16)
+
+            Divider()
 
             StarRatingView(rating: $rating)
-                .padding(.vertical, 8)
+                .padding(.vertical, 16)
+                .onChange(of: rating) { _, newValue in
+                    HapticFeedback.success()
+                    onRating(newValue)
+                }
 
-            Button {
-                HapticFeedback.success()
-                onRating(rating)
-            } label: {
-                Text(primaryButtonTitle)
-                    .frame(maxWidth: .infinity)
-            }
-            .buttonStyle(.borderedProminent)
-            .controlSize(.large)
-            .disabled(rating == 0)
+            Divider()
 
             Button {
                 onDismiss?()
             } label: {
                 Text(dismissButtonTitle)
-                    .font(.subheadline)
+                    .font(.body)
+                    .frame(maxWidth: .infinity)
+                    .padding(.vertical, 12)
             }
             .buttonStyle(.plain)
-            .foregroundStyle(.secondary)
         }
-        .padding(.horizontal, 24)
-        .padding(.vertical, 16)
-        .presentationDetents([.height(300)])
-        .presentationDragIndicator(.visible)
+        .background(.ultraThinMaterial)
+        .clipShape(RoundedRectangle(cornerRadius: 14))
+        .shadow(color: .black.opacity(0.2), radius: 40, y: 10)
+        .padding(.horizontal, 52)
     }
 }
