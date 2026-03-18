@@ -1,13 +1,16 @@
 # AppReviewKit
 
-A lightweight SwiftUI library for presenting customizable in-app review prompts on iOS 17+.
+[![Swift 5.9](https://img.shields.io/badge/Swift-5.9-orange.svg)](https://img.shields.io/badge/Swift-5.9-orange.svg)
+[![iOS 17+](https://img.shields.io/badge/iOS-17%2B-blue.svg)](https://img.shields.io/badge/iOS-17%2B-blue.svg)
+[![SPM](https://img.shields.io/badge/SPM-compatible-brightgreen.svg)](https://img.shields.io/badge/SPM-compatible-brightgreen.svg)
+[![License](https://img.shields.io/badge/License-MIT-lightgrey.svg)](https://img.shields.io/badge/License-MIT-lightgrey.svg)
+
+A lightweight SwiftUI library for presenting customizable in-app review prompts with star ratings.
 
 ## Installation
 
-Add the package to your project via Swift Package Manager:
-
-```swift
-.package(url: "https://github.com/yourname/AppReviewKit.git", from: "1.0.0")
+```
+https://github.com/yourname/AppReviewKit.git
 ```
 
 ## Usage
@@ -31,6 +34,12 @@ struct ContentView: View {
 }
 ```
 
+## Requirements
+
+- iOS 17+
+- Swift 5.9+
+- Xcode 15+
+
 ## License
 
-MIT
+MIT License. See LICENSE for details.
